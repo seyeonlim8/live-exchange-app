@@ -1,0 +1,36 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-liveexchangeapp-dev-142618-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335441283:role/amplify-liveexchangeapp-dev-142618-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335441283:role/amplify-liveexchangeapp-dev-142618-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-liveexchangeapp-dev-142618-deployment",
+      "UnauthRoleName": "amplify-liveexchangeapp-dev-142618-unauthRole",
+      "StackName": "amplify-liveexchangeapp-dev-142618",
+      "StackId": "arn:aws:cloudformation:us-east-2:730335441283:stack/amplify-liveexchangeapp-dev-142618/03e90dd0-e555-11ee-9e87-066d560953a7",
+      "AmplifyAppId": "d38qrtxd5rd63a",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-liveexchangeapp-dev-142618-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-liveexchangeapp-dev-142618-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "liveexchangeapp34139b56": {}
+      },
+      "function": {
+        "newLiveExchangeLambda": {
+          "deploymentBucketName": "amplify-liveexchangeapp-dev-142618-deployment",
+          "s3Key": "amplify-builds/newLiveExchangeLambda-6f614469636e59725355-build.zip"
+        },
+        "liveexchangeapp34139b56PreSignup": {
+          "deploymentBucketName": "amplify-liveexchangeapp-dev-142618-deployment",
+          "s3Key": "amplify-builds/liveexchangeapp34139b56PreSignup-3362422b4c7264467432-build.zip"
+        }
+      },
+      "api": {
+        "newLiveExchangeRESTApi": {},
+        "liveexchangeapp": {}
+      }
+    }
+  }
+}
