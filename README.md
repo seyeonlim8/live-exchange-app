@@ -1,4 +1,5 @@
 # Full-Stack Serverless Real-Time Currency Conversion App
+![React App · 10 19pm · 07-17](https://github.com/user-attachments/assets/9780fede-75d9-4ce1-acb7-2f78f8a7f24a)
 
 ## Project Overview
 
