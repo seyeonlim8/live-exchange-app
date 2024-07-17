@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Full-Stack Serverless Real-Time Currency Conversion App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is a Full-Stack Serverless application designed to enable real-time currency conversion for user expenses. The application leverages a combination of AWS services for backend processes and React for the frontend to provide a seamless and responsive user experience.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **Backend:**
+  - AWS Lambda
+  - Amazon API Gateway
+  - Amazon DynamoDB
+  - Amazon Cognito
+  - Node.js
+- **Frontend:**
+  - React
+  - HTML/CSS/JavaScript
+  - AWS Amplify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Real-time currency conversion using Open Exchange Rates API.
+- Secure user authentication and authorization with Amazon Cognito.
+- CRUD operations for user expenses stored in DynamoDB.
+- Responsive user interface built with React.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
 
-### `npm run build`
+The backend consists of three main AWS Lambda functions written in JavaScript:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **convert-currency**
+   - Uses Open Exchange Rates API to fetch the current exchange rate for the selected currency.
+2. **add-expenses**
+   - Updates the DynamoDB table with the new expense amount provided by the user.
+3. **get-current-expenses**
+   - Fetches the current total expenses of the user from the DynamoDB table.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Each Lambda function is triggered by an API created using Amazon API Gateway.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
 
-### `npm run eject`
+The frontend is built using React and AWS Amplify for authentication. It includes components for:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- User login and sign-up.
+- Fetching and displaying current user expenses.
+- Adding new expenses.
+- Converting expenses to the selected currency.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Detailed Explanation
+### AWS Lambda Functions
+* convert-currency:
+  - Fetches the current exchange rate from Open Exchange Rates API.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* add-expenses:
+  - Updates the user's total expenses in DynamoDB.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* get-current-expenses:
+  - Retrieves the current total expenses of the user.
 
-## Learn More
+### Amazon DynamoDB
+The DynamoDB table stores user information and their total expenses.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Amazon Cognito
+Amazon Cognito handles user authentication and authorization, ensuring secure access to the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License
+This project is licensed under the MIT License.
