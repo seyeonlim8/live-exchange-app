@@ -42,7 +42,7 @@ Each Lambda function is triggered by an API created using Amazon API Gateway.
 
 ### Frontend
 
-The frontend is built using React and AWS Amplify for authentication. It includes components for:
+The frontend is built using React and AWS Cognito for authentication. It includes components for:
 
 - User login and sign-up.
 - Fetching and displaying current user expenses.
